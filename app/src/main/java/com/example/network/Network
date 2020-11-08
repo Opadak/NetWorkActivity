@@ -21,5 +21,30 @@ Local DataBase의 한계
 
 
 JSON
--JavaScript Objects NOtation -> Javascript에서 객체를 만들 때 사용하는 표현식이다.
+- JavaScript Objects NOtation -> Javascript에서 객체를 만들 때 사용하는 표현식이다.
 
+JSON형식
+- [] -> List
+- {} -> 객체
+    -> "" -> 문자열
+    -> "" 없으면 -> 숫자
+
+val number : Int = 10
+val number = 10
+->> kotlin은 반강타입 언어이다.
+반면, Java는 강타입 언어! (타입을 꼭 적어줘야 한다.)
+
+[
+    {
+        "id" :1,
+        "name" : "홍길동",
+        "age" : 20,
+        "intro" : "나는 홍길동이다."
+    },
+    {
+        "id" : 2,
+        "name" : "김아무개",
+        "age" : 10,
+        "intro" : "나는 김아무개 입니다."
+        }
+]
