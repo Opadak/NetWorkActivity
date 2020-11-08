@@ -1,0 +1,25 @@
+
+
+
+
+네트워크(통신)
+-> 통신
+
+
+앱이 작동하는 Flow
+
+DataBase <------------> Server <------------->Client(app,web,...)
+
+Local DataBase의 한계
+- 동기화가 어렵다.
+- 상호작용이 불가능 하다. (ex> 댓글)
+
+서버와 통신하는 방법
+- 해당 Url로 전달한다.
+- 인증정보를 보낸다.
+- JSON 형식을 사용해서 Data를 보낸다.
+
+
+JSON
+-JavaScript Objects NOtation -> Javascript에서 객체를 만들 때 사용하는 표현식이다.
+
