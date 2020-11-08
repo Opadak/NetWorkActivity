@@ -29,14 +29,11 @@ JSON형식
     -> "" -> 문자열
     -> "" 없으면 -> 숫자
 
-val number : Int = 10
-val number = 10
-->> kotlin은 반강타입 언어이다.
-반면, Java는 강타입 언어! (타입을 꼭 적어줘야 한다.)
 
+Json Response
 [
     {
-        "id" :1,
+        "id" :1,                        ->문서에 써있다. (필드의 타입에!)
         "name" : "홍길동",
         "age" : 20,
         "intro" : "나는 홍길동이다."
@@ -48,3 +45,32 @@ val number = 10
         "intro" : "나는 김아무개 입니다."
         }
 ]
+
+해석하는 과정 => Json Parsing
+->Json 을 코틀린이나 자바가 이해할 수 있게 변형 하는 과정.
+
+Serializable (직렬화)
+-> 자바 시스템 내부에서 사용되는 object를 외부에서 사용할 수 있도록 byte 형태로 데이터를 바꾸는것.
+(=>
+----------------------->
+  id, name, age, intro
+
+코틀린이나/ 자바가 알아 들을 수 있는 틀
+class Person(
+    var id: int? = null
+    var name : String? = null
+    var age : Int? = null
+    var intro : String? = null
+)
+    -같은 변수명이 있는 곳을 찾아서 넣어준다.
+이것이 직렬화 이다.
+
+
+
+
+
+val number : Int = 10
+val number = 10
+->> kotlin은 반강타입 언어이다.
+반면, Java는 강타입 언어! (타입을 꼭 적어줘야 한다.) )
+
