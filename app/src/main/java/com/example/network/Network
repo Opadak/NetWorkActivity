@@ -65,7 +65,15 @@ class Person(
     -같은 변수명이 있는 곳을 찾아서 넣어준다.
 이것이 직렬화 이다.
 
+Request Type              Status Code
+-GET = 정보 요청           -> 200OK (구글링 " http status code" 라고 하면 자세히 나옴!)
+-POST = 정보 추가 요청     -> 201 Created
+-DELETE = 정보 삭제 요청
+-PUT = 정보 수정 요청
 
+Status Code
+- 200번대 -> 처리가 잘 된것!
+- 외울 수 없다! (너무 많다!)
 
 
 
