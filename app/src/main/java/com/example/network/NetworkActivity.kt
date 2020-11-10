@@ -3,6 +3,7 @@ package com.example.network
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.gson.Gson
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -41,6 +42,12 @@ class NetworkTask():AsyncTask<Any?,Any?,Any?>() {
             )
             buffer = reader.readLine() //줄을 읽겠다.  => 사람이 알아들을 수 있는 언어로 바꿔주겠다.
         }
+        val data = Gson().fromJson(buffer, Array<PersonFromServer>::class.java) //String을 넣어주고 String을 부어넣을 틀을 넣어준다.
+        // Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 1 column 2 path $
+        // 나는 객체를 기다리고 있었는데 어레이가 왔다라는 오류 문구이다.
+        // PersonFromServer라는 클래스는 객체를 받는 클래스 인데, 네트워크에 있는 무수히 많은 객체를 받으려면
+        //위와 같은 오류가 생긴다.
+        // 즉, PersonFromServer라는 클래스를 Array 형식으로(List) 맏아야 하기 때문에 Array<>를 감싸준다.
 
         return null
     }
